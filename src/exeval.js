@@ -7,7 +7,7 @@ function evaluate(line) {
         expr = solve(expr, '*');
         expr = solve(expr, '+');
         expr = solve(expr, '-');
-        if (expr.isNan() || expr === null || expr === undefined) {
+        if (isNaN(expr) || expr === null || expr === undefined) {
             console.log("Invalid Expression");
         } else {
             console.log("Result:", expr[0]);

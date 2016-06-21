@@ -1,0 +1,29 @@
+{
+  "name": "jstests",
+  "version": "1.0.0",
+  "description": "App to test different build tools and stuff.",
+  "main": "src/exeval.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "jslint": "^0.10.1",
+    "qr-image": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodejs src/exeval.js",
+    "start": "nodejs src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aero31aero/jstests.git"
+  },
+  "author": "Rohitt Vashishtha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aero31aero/jstests/issues"
+  },
+  "homepage": "https://github.com/aero31aero/jstests#readme"
+}
