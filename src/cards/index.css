@@ -1,7 +1,6 @@
 .card-holder{
     margin: 10px;
     display: inline-block;
-    float: left;
     width: 320px;
 	height: 200px;
 }
@@ -15,9 +14,9 @@
 }
 
 .card-container, .front, .back {
-    
+    position: relative;
 	width: 320px;
-	height: 200px;
+	height: 210px;
 }
 
 .card {
@@ -34,7 +33,6 @@
 }
 
 .front {
-    background-color: aqua;
 	z-index: 2;
 	transform: rotateY(0deg);
 }
@@ -42,4 +40,55 @@
 .back {
     background-color: steelblue;
     transform: rotateY(180deg);
+}
+.letter {
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 600;
+    font-family: monospace;
+}
+.quote {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 150px;
+    color: #fff;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    opacity: 0;
+    text-align:center;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+}
+
+.back-image{
+    width: inherit;
+    height: inherit;
+}
+
+html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#textarea {
+    position: relative;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    margin: 30px;
 }
