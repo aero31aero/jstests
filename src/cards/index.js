@@ -77,7 +77,12 @@ window.onload = function () {
     quotes.push("I will KILL YOU!");
     quotes.push("Done it all at NARAYANA!");
     quotes.push("Get me TWO creamrolls!");
-    quotes.push("Commmit the code!")
+    quotes.push("Commmit the Bitch!");
+    quotes.push("Fuck this, I'll write ASSEMBLY.");
+    quotes.push("var shit1,shit2,newshit;");
+    quotes.push("My surname is not PRO");
+    quotes.push("We'll take over the world!");
+    quotes.push("AAAAAH. ORGASM BITCH!");
     setInterval(function(){
         var num = Math.floor(Math.random()*quotes.length);
         console.log(num)
