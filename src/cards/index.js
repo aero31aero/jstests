@@ -32,13 +32,17 @@ window.onload = function () {
     
     function fadeOut(el) {
         el.style.opacity = 1;
-        (function fade() {
+        function fade() {
             if ((el.style.opacity -= .004) < 0) {
                 el.style.display = "none";
+                var num = Math.floor(Math.random()*quotes.length);
+                console.log(num)
+                flashText(quotes[num]);
             } else {
                 requestAnimationFrame(fade);
             }
-        })();
+        };
+        fade();
     }
     
     function flashText(text){
@@ -49,27 +53,15 @@ window.onload = function () {
         fadeOut(newdiv);
     }
     
+    function insertWords(words){
+        words = words.split('');
+        words.forEach(function(elem,index){
+           insertletter(elem); 
+        });
+    }
+    
     var quotes = [];
-    insertletter('H');
-    insertletter('A');
-    insertletter('P');
-    insertletter('P');
-    insertletter('Y');
-    insertletter('B');
-    insertletter('I');
-    insertletter('R');
-    insertletter('T');
-    insertletter('H');
-    insertletter('D');
-    insertletter('A');
-    insertletter('Y');
-    insertletter('N');
-    insertletter('I');
-    insertletter('S');
-    insertletter('C');
-    insertletter('H');
-    insertletter('A');
-    insertletter('Y');
+    insertWords('HAPPYBIRTHDAYNISCHAY');
     fadeIn(document.getElementById('container'));
     quotes.push("This is SHITCODE!");
     quotes.push("Weak Encrytion KILLS!");
@@ -88,5 +80,6 @@ window.onload = function () {
         console.log(num)
         flashText(quotes[num]);
     },5000);
-    
+    quotes.push("Commmit the code!")
+    flashText("Shit that Nischay says...");
 }
