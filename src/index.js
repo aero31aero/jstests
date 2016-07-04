@@ -1,5 +1,7 @@
-var qr = require('qr-image');  
+var qr = require('qr-image');
+var https = require('https');
 var express = require('express');
+var fs = require('fs');
 
 var app = express();
 
@@ -10,4 +12,7 @@ app.get('/', function(req, res) {
   //res.write(code);
 });
 
-app.listen(3000);
+https.createServer({
+      key: fs.readFileSync('./config/key.pem'),
+      cert: fs.readFileSync('./config/cert.pem')
+    }, app).listen(3000);
