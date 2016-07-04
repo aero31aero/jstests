@@ -17,7 +17,7 @@ window.onload = function () {
         var image = '<img src="img' + imageNumber + '.jpg" class="back-image">';
         return image;
     }
-    
+
     function fadeIn(el, display) {
         el.style.opacity = 0;
         el.style.display = display || "block";
@@ -29,13 +29,14 @@ window.onload = function () {
             }
         })();
     }
-    
+
     function fadeOut(el) {
         el.style.opacity = 1;
+
         function fade() {
             if ((el.style.opacity -= .004) < 0) {
                 el.style.display = "none";
-                var num = Math.floor(Math.random()*quotes.length);
+                var num = Math.floor(Math.random() * quotes.length);
                 console.log(num)
                 flashText(quotes[num]);
             } else {
@@ -44,22 +45,22 @@ window.onload = function () {
         };
         fade();
     }
-    
-    function flashText(text){
-        var newdiv=document.createElement('div');
-        var textarea=document.getElementById('textarea');
-        newdiv.innerHTML='<p class="quote">'+text+'</p>';
+
+    function flashText(text) {
+        var newdiv = document.createElement('div');
+        var textarea = document.getElementById('textarea');
+        newdiv.innerHTML = '<p class="quote">' + text + '</p>';
         textarea.appendChild(newdiv);
         fadeOut(newdiv);
     }
-    
-    function insertWords(words){
+
+    function insertWords(words) {
         words = words.split('');
-        words.forEach(function(elem,index){
-           insertletter(elem); 
+        words.forEach(function (elem, index) {
+            insertletter(elem);
         });
     }
-    
+
     var quotes = [];
     insertWords('HAPPYBIRTHDAYNISCHAY');
     fadeIn(document.getElementById('container'));
@@ -81,5 +82,7 @@ window.onload = function () {
         flashText(quotes[num]);
     },5000);
     quotes.push("Commmit the code!")
-    flashText("Shit that Nischay says...");
+    setTimeout(function () {
+        flashText("Stuff that Nischay says...");
+    }, 5000);
 }
