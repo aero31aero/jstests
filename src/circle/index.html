@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Event Circle</title>
+
+    <script src="lib/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+    <svg height="0" width="0">
+        <defs>
+            <clipPath clipPathUnits="objectBoundingBox" id="sector">
+                <path fill="none" stroke="#111" stroke-width="1" class="sector" d="
+                   M 0.5,0.1
+                   A 0.4,0.4 0 0,1 0.9,0.5
+                   l 0.1,0
+                   A 0.5,0.5 0 0,0 0.5,0 
+                   z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+    <div id="circle-truck">
+        <div id="circle-carton">
+            <div id="circle-text">15th October</div>
+            <div id="circle-container">
+                <div id="circle-outer">
+                    <div id="circle-inner">
+
+                        <div id="circle-days-container">
+                            <div onclick="gotoDay(getCurrentDay(),0)" class="circle-day" id="circle-day-1"></div>
+                            <div onclick="gotoDay(getCurrentDay(),1)" class="circle-day circle-day-active" id="circle-day-2"></div>
+                            <div onclick="gotoDay(getCurrentDay(),2)" class="circle-day" id="circle-day-3"></div>
+                            <div class="circle-day circle-day-inactive" id="circle-day-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <style>
+        .circle-day {
+            clip-path: url(#sector);
+            -webkit-clip-path: url(#sector);
+        }
+
+    </style>
+</body>
+
+</html>
