@@ -13,9 +13,10 @@ window.onload = function () {
         containment: 'parent',
         helper: 'clone',
         drag: function (event, ui) {
-            var val = parseFloat(this.style.top);
-            document.getElementById('content-1').style.height=parseFloat(event.clientY);
+            document.getElementById('content-1').style.height;
             console.log("Me being dragged");
+            console.log(event);
+            
             console.log(event.clientY);
             console.log(event.pageY);
         }
