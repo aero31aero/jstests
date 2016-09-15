@@ -37,6 +37,7 @@ body {
   height: 50vw;
   max-width: 90vh;
   max-height: 90vh;
+  overflow: hidden;
 }
 
 #circle-container {
@@ -48,6 +49,7 @@ body {
   top: 0;
   transform: scale(1) translateX(0%);
   box-sizing: border-box;
+  overflow: hidden;
   /*animation: animation-spin 3s 0s infinite;*/
 }
 
