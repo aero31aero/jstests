@@ -19,33 +19,50 @@
             </clipPath>
         </defs>
     </svg>
-    <div id="circle-truck">
+    <div class="_parent">
+    <div class="_left">
         <div id="circle-carton">
-            <div id="circle-text">15th October</div>
-            <div id="circle-container">
-                <div id="circle-outer">
-                    <div id="circle-inner">
-
-                        <div id="circle-days-container">
-                            <div onclick="gotoDay(getCurrentDay(),0)" class="circle-day" id="circle-day-1"></div>
-                            <div onclick="gotoDay(getCurrentDay(),1)" class="circle-day circle-day-active" id="circle-day-2"></div>
-                            <div onclick="gotoDay(getCurrentDay(),2)" class="circle-day" id="circle-day-3"></div>
-                            <div class="circle-day circle-day-inactive" id="circle-day-4"></div>
-                        </div>
+        <div id="circle-text">15th October</div>
+        <div id="circle-container">
+            <div id="circle-outer">
+                <div id="circle-inner">
+                    <div id="circle-days-container">
+                        <div onclick="gotoDay(getCurrentDay(),0)" class="circle-day" id="circle-day-1"></div>
+                        <div onclick="gotoDay(getCurrentDay(),1)" class="circle-day circle-day-active" id="circle-day-2"></div>
+                        <div onclick="gotoDay(getCurrentDay(),2)" class="circle-day" id="circle-day-3"></div>
+                        <div class="circle-day circle-day-inactive" id="circle-day-4"></div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <div class='_right'>
+    </div>
+    </div>
     <link rel="stylesheet" type="text/css" href="./index.css">
     <style>
         .circle-day {
             clip-path: url(#sector);
             -webkit-clip-path: url(#sector);
         }
+        ._parent {
+            display: flex;
+            position: absolute;
+            width:100%;
+            height: 100%;
+        }
+        ._parent > div {
+            display: inline-flex;
+            width:50%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+        }
 
     </style>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
