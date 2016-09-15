@@ -35,6 +35,8 @@ body {
   display: block;
   width: 50vw;
   height: 50vw;
+  max-width: 90vh;
+  max-height: 90vh;
 }
 
 #circle-container {

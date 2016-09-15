@@ -15,8 +15,19 @@ var gotoDay = function(currentDay, comingDay) {
   circletext.innerHTML = comingDate + "th October";
   var days = document.getElementsByClassName('circle-day');
   var direction = currentDay - comingDay == 1 || comingDay - currentDay == 2 ? 1 : -1;
-  angle += direction * Math.abs(currentDay - comingDay) * 90;
-  console.log("Angle:", angle, "Now:", currentDay, "Next:", comingDay);
+  // angle += direction * Math.abs(currentDay - comingDay) * 90;
+  // console.log("Angle:", angle, "Now:", currentDay, "Next:", comingDay);
+  switch(comingDay){
+    case 0:
+      angle = 60;
+      break;
+    case 1:
+      angle = 0;
+      break;
+    case 2:
+      angle = -60;
+      break;
+  }
   days[currentDay].classList.remove('circle-day-active');
   days[comingDay].classList.add('circle-day-active');
   $('#circle-container').animate({
@@ -57,3 +68,4 @@ document.addEventListener('keyup', function doc_keyUp(e) {
     nextDay();
   }
 }, false);
+
