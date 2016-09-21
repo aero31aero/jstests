@@ -96,3 +96,14 @@ var rotateByTime = function(time){
     else switchActiveDay(currentDay,0);
   }
 }
+
+
+
+var power = function(num,pow=2){
+  if(pow == 0){
+    return 1;
+  }
+  else {
+    return num * power(num,pow-1);
+  }
+}
