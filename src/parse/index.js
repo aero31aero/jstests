@@ -6,6 +6,9 @@ window.onload = function () {
         if(SHA256(inputfield.value.toUpperCase()) == hash){
             inputholder.style.background = "#115522";
         }
+        else if(inputfield.value.length==0) {
+            inputholder.style.background = "#000000";
+        }
         else {
             inputholder.style.background = "#661111";
         }
