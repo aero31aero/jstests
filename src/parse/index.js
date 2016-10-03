@@ -1,5 +1,5 @@
 window.onload = function () {
-    var hash = "4e5a77169fdc1eaa7a5f66d1ef2c7958760504e6ce1b2d31a9f59585bd13bc9a";
+    var hash = "68e8a3148fb1580747bbeeed2603df8f95f364b8354f850dad746875befdff53";
     var inputfield = document.getElementById('input-field');
     var inputholder = document.getElementById('repl');
     inputfield.addEventListener("keyup", function(){
