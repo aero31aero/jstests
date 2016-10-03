@@ -4,7 +4,7 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 
 grunt.initConfig({
   jshint: {
-    all: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js']
+    all: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js', '~src/**/*.min.js']
   }
 });
 
