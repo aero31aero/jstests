@@ -3,9 +3,10 @@ body {
     padding-right: 25%;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #fefefe;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     body {
         padding-left: 10%;
         padding-right: 10%;
